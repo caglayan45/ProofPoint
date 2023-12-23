@@ -1,0 +1,78 @@
+
+t
+java:S2293w"YReplace the type specification in this constructor call with the diamond operator ("<>").(õ¾Ù±ÿÿÿÿÿ
+o
+java:S2293|"YReplace the type specification in this constructor call with the diamond operator ("<>").(ºÉÈÕ
+u
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(õ¾Ù±ÿÿÿÿÿ
+p
+java:S2293“"YReplace the type specification in this constructor call with the diamond operator ("<>").(ºÉÈÕ
+k	java:S117F"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·®ÿÿÿÿÿ
+f	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤‡¾Œ
+f	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤‡¾Œ
+f	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤‡¾Œ
+f	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤‡¾Œ
+f	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤‡¾Œ
+f	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤‡¾Œ
+f	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤‡¾Œ
+f	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤‡¾Œ
+f	java:S117]"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïÊÍô
+k	java:S117e"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à¬Ò£ıÿÿÿÿ
+d
+java:S1104Å"NMake id a static final constant or non-public and provide accessors if needed.(Á¿ù
+m
+java:S1104Ç"QMake owner a static final constant or non-public and provide accessors if needed.(şè²Òøÿÿÿÿ
+p
+java:S1104É"TMake newsType a static final constant or non-public and provide accessors if needed.(èÜ±Ìşÿÿÿÿ
+s
+java:S1104Ë"\Make newsTypeCategory a static final constant or non-public and provide accessors if needed.(·îß£
+h
+java:S1104Í"QMake title a static final constant or non-public and provide accessors if needed.(Å¬õ
+s
+java:S1104Ï"WMake description a static final constant or non-public and provide accessors if needed.(¹ÿ†ğÿÿÿÿÿ
+j
+java:S1104Ñ"SMake content a static final constant or non-public and provide accessors if needed.(­ÁÅ’
+i
+java:S1104Ó"RMake author a static final constant or non-public and provide accessors if needed.(ÌÊß›
+Q	java:S107N"<Method has 8 parameters, which is greater than 7 authorized.(¤‡¾Œ
+^
+java:S63554"HAdd 'since' and/or 'forRemoval' arguments to the @Deprecated annotation.(õˆúš
+K
+java:S11335"5Do not forget to remove this deprecated code someday.(î…ŞŠ
+>
+java:S11235"(Add the missing @deprecated Javadoc tag.(î…ŞŠ
+^
+java:S6355="HAdd 'since' and/or 'forRemoval' arguments to the @Deprecated annotation.(õˆúš
+P
+java:S1133>"5Do not forget to remove this deprecated code someday.(¡¤Šıüÿÿÿÿ
+C
+java:S1123>"(Add the missing @deprecated Javadoc tag.(¡¤Šıüÿÿÿÿ
+i	java:S100‰"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıÑÿÿÿÿÿ
+_
+java:S6355 "HAdd 'since' and/or 'forRemoval' arguments to the @Deprecated annotation.(õˆúš
+Q
+java:S1133¡"5Do not forget to remove this deprecated code someday.(‡âÕ¯ùÿÿÿÿ
+D
+java:S1123¡"(Add the missing @deprecated Javadoc tag.(‡âÕ¯ùÿÿÿÿ
+_
+java:S6355¥"HAdd 'since' and/or 'forRemoval' arguments to the @Deprecated annotation.(õˆúš
+L
+java:S1133¦"5Do not forget to remove this deprecated code someday.(Ì…–
+?
+java:S1123¦"(Add the missing @deprecated Javadoc tag.(Ì…–
+_
+java:S6355º"HAdd 'since' and/or 'forRemoval' arguments to the @Deprecated annotation.(õˆúš
+L
+java:S1133»"5Do not forget to remove this deprecated code someday.(®µÀÈ
+?
+java:S1123»"(Add the missing @deprecated Javadoc tag.(®µÀÈ
+_
+java:S6355¿"HAdd 'since' and/or 'forRemoval' arguments to the @Deprecated annotation.(õˆúš
+Q
+java:S1133À"5Do not forget to remove this deprecated code someday.(™Ï€£ûÿÿÿÿ
+D
+java:S1123À"(Add the missing @deprecated Javadoc tag.(™Ï€£ûÿÿÿÿ
+A
+java:S2160Ä"+Override the "equals" method in this class.(‘ñûu
+\	java:S107Õ"AConstructor has 8 parameters, which is greater than 7 authorized.(šÆàüıÿÿÿÿ
+\	java:S107è"AConstructor has 8 parameters, which is greater than 7 authorized.(†Å±÷ÿÿÿÿÿ

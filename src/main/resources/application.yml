@@ -1,0 +1,23 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/newsDB
+      database: newsDB
+
+blockchain:
+  chainId: ${BLOCKCHAIN_CHAIN_ID:10}
+  url: ${BLOCKCHAIN_NODE:http://localhost:22000}  # Blockchain url
+  explorer-url: ${BLOCKCHAIN_EXPLORER_URL:http://localhost:8999}  # Blockchain explorer url
+server:
+  port: ${SERVER_PORT:8080}
+
+springdoc:
+  swagger-ui:
+    disable-swagger-default-url: true
+    path: "/docs/swagger-ui.html"
+
+logging:
+  level:
+    org:
+      springframework:
+        security: debug # or trace

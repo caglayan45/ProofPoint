@@ -1,0 +1,57 @@
+
+t
+java:S2293C"YReplace the type specification in this constructor call with the diamond operator ("<>").(’ğàæûÿÿÿÿ
+t
+java:S2293d"YReplace the type specification in this constructor call with the diamond operator ("<>").(ç÷Ú€üÿÿÿÿ
+C
+java:S1604O"(Make this anonymous inner class a lambda(şğô·øÿÿÿÿ
+>
+java:S1604n"(Make this anonymous inner class a lambda(—À¥–
+h
+java:S1104¤"QMake owner a static final constant or non-public and provide accessors if needed.(áÖ“·
+m
+java:S1104¦"QMake index a static final constant or non-public and provide accessors if needed.(àç“ûıÿÿÿÿ
+7
+java:S1116)"Remove this empty statement.(Åñ­õşÿÿÿÿ
+7
+java:S1116-"Remove this empty statement.(Åñ­õşÿÿÿÿ
+^
+java:S6355/"HAdd 'since' and/or 'forRemoval' arguments to the @Deprecated annotation.(õˆúš
+K
+java:S11330"5Do not forget to remove this deprecated code someday.(•ìæü
+>
+java:S11230"(Add the missing @deprecated Javadoc tag.(•ìæü
+^
+java:S63558"HAdd 'since' and/or 'forRemoval' arguments to the @Deprecated annotation.(õˆúš
+J
+java:S11339"5Do not forget to remove this deprecated code someday.(œç¬$
+=
+java:S11239"(Add the missing @deprecated Javadoc tag.(œç¬$
+Z
+java:S1854q"?Remove this useless assignment to local variable "eventValues".(ÃŸ‹¼úÿÿÿÿ
+K
+java:S1481q"0Remove this unused "eventValues" local variable.(ÃŸ‹¼úÿÿÿÿ
+^
+java:S6355"HAdd 'since' and/or 'forRemoval' arguments to the @Deprecated annotation.(õˆúš
+Q
+java:S1133€"5Do not forget to remove this deprecated code someday.(£–ûèüÿÿÿÿ
+D
+java:S1123€"(Add the missing @deprecated Javadoc tag.(£–ûèüÿÿÿÿ
+_
+java:S6355„"HAdd 'since' and/or 'forRemoval' arguments to the @Deprecated annotation.(õˆúš
+L
+java:S1133…"5Do not forget to remove this deprecated code someday.(˜ê–²
+?
+java:S1123…"(Add the missing @deprecated Javadoc tag.(˜ê–²
+_
+java:S6355•"HAdd 'since' and/or 'forRemoval' arguments to the @Deprecated annotation.(õˆúš
+Q
+java:S1133–"5Do not forget to remove this deprecated code someday.(×ÓÎ²ÿÿÿÿÿ
+D
+java:S1123–"(Add the missing @deprecated Javadoc tag.(×ÓÎ²ÿÿÿÿÿ
+_
+java:S6355"HAdd 'since' and/or 'forRemoval' arguments to the @Deprecated annotation.(õˆúš
+L
+java:S1133Ÿ"5Do not forget to remove this deprecated code someday.(‚Ôç
+?
+java:S1123Ÿ"(Add the missing @deprecated Javadoc tag.(‚Ôç
