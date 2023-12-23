@@ -2,9 +2,10 @@ package com.proofpoint.enums;
 
 public enum DocumentTypeCategory {
 
-    POLICIES,
+    POLICY,
     SPORTS,
     ENTERTAINMENT,
+    ECONOMY,
     BUSINESS,
     TECHNOLOGY,
     HEALTH,
