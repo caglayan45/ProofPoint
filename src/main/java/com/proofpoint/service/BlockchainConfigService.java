@@ -25,11 +25,11 @@ import static com.proofpoint.config.BlockChainConfiguration.GAS_LIMIT;
 @Slf4j
 public class BlockchainConfigService {
 
-    private Web3j web3jClient;
-    private ContractGasProvider provider;
+    private final Web3j web3jClient;
+    private final ContractGasProvider provider;
     private final BlockChainConfiguration configuration;
     private final BlockchainConfigRepository blockchainConfigRepository;
-    private SmartContractRepository smartContractRepository;
+    private final SmartContractRepository smartContractRepository;
     private NewsContract contract;
 
     public BlockchainConfigService(BlockChainConfiguration configuration, BlockchainConfigRepository blockchainConfigRepository, SmartContractRepository smartContractRepository) {

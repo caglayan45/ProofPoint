@@ -3,6 +3,7 @@ package com.proofpoint.controller;
 import com.proofpoint.api.NewsAPI;
 import com.proofpoint.dto.request.NewsRequest;
 import com.proofpoint.dto.response.NewsResponse;
+import com.proofpoint.enums.DocumentTypeCategory;
 import com.proofpoint.service.NewsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,5 +34,10 @@ public class NewsController implements NewsAPI {
     @Override
     public List<NewsResponse> getNews() {
         return newsService.getNews();
+    }
+
+    @Override
+    public List<NewsResponse> getNewsByCategory(DocumentTypeCategory category) {
+        return newsService.getNewsByCategory(category);
     }
 }

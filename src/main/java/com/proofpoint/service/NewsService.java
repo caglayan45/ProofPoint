@@ -4,6 +4,7 @@ import com.proofpoint.document.News;
 import com.proofpoint.document.Transaction;
 import com.proofpoint.dto.request.NewsRequest;
 import com.proofpoint.dto.response.NewsResponse;
+import com.proofpoint.enums.DocumentTypeCategory;
 import com.proofpoint.mapper.NewsMapper;
 import com.proofpoint.repository.NewsRepository;
 import lombok.AllArgsConstructor;
@@ -116,5 +117,15 @@ public class NewsService {
                 .blockchainId(transaction.getBlockchainId())
                 .contractAddress(transaction.getContractAddress())
                 .build();
+    }
+
+    public List<NewsResponse> getNewsByCategory(DocumentTypeCategory category) {
+        NewsContract contract = blockchainConfigService.getContract();
+
+        List<News> newsList = newsRepository.findByCategory(category);
+        if (newsList.isEmpty()) {
+            throw new RuntimeException("Transactions can not found by category:" + category);
+        }
+        return newsList.stream().map(news -> getNewsResponse(news, contract)).filter(Objects::nonNull).collect(Collectors.toList());
     }
 }

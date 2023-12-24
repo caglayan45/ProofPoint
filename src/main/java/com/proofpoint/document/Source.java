@@ -1,7 +1,5 @@
 package com.proofpoint.document;
 
-import com.proofpoint.enums.DocumentType;
-import com.proofpoint.enums.DocumentTypeCategory;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

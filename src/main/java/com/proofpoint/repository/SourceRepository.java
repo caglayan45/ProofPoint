@@ -13,6 +13,4 @@ public interface SourceRepository extends MongoRepository<Source, String> {
 
     @NotNull
     Optional<Source> findById(@NotNull String id);
-
-    Optional<Source> findByNewsId(String newsId);
 }

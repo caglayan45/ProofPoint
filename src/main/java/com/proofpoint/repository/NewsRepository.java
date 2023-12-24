@@ -6,6 +6,7 @@ import com.proofpoint.enums.DocumentTypeCategory;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface NewsRepository extends MongoRepository<News, String> {
@@ -19,5 +20,5 @@ public interface NewsRepository extends MongoRepository<News, String> {
 
     Optional<News> findByType(DocumentType type);
 
-    Optional<News> findByCategory(DocumentTypeCategory category);
+    List<News> findByCategory(DocumentTypeCategory category);
 }
