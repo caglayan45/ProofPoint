@@ -34,7 +34,8 @@ public class NewsService {
     public NewsResponse getNews(String id) {
         NewsContract contract = blockchainConfigService.getContract();
 
-        Optional<News> optionalNews = newsRepository.findById(id);
+        Optional<News> optionalNews = Optional.ofNullable(newsRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Transaction can not found by object id:" + id)));
         News news = optionalNews.orElse(null);
         return getNewsResponse(news, contract);
     }
@@ -42,7 +43,8 @@ public class NewsService {
     public NewsResponse getNewsByTxId(String txId) {
         NewsContract contract = blockchainConfigService.getContract();
 
-        Optional<News> optionalNews = newsRepository.findByTransactionTransactionHash(txId);
+        Optional<News> optionalNews = Optional.ofNullable(newsRepository.findByTransactionTransactionHash(txId)
+                .orElseThrow(() -> new RuntimeException("Transaction can not found by transaction id:" + txId)));
         News news = optionalNews.orElse(null);
         return getNewsResponse(news, contract);
     }

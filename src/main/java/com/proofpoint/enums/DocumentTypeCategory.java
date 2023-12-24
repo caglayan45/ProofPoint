@@ -6,6 +6,7 @@ public enum DocumentTypeCategory {
     SPORTS,
     ENTERTAINMENT,
     ECONOMY,
+    HISTORY,
     BUSINESS,
     TECHNOLOGY,
     HEALTH,
