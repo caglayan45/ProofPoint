@@ -1,6 +1,5 @@
 package com.proofpoint.config.db;
 
-
 import com.github.cloudyrock.mongock.ChangeLog;
 import com.github.cloudyrock.mongock.ChangeSet;
 import com.proofpoint.config.BlockChainConfiguration;
@@ -32,7 +31,7 @@ public class v3DeploySmartContract {
         String bbp = blockChainKey.getEcKeyPair().getPublicKey().toString();
 
         String bpk = blockChainKey.getEcKeyPair().getPrivateKey().toString();
-        BlockchainConfig blockchainConfigDocument = new BlockchainConfig(null, bbp, bpk,Boolean.TRUE);
+        BlockchainConfig blockchainConfigDocument = new BlockchainConfig(null, bbp, bpk, Boolean.TRUE);
 
         Web3j web3j = Web3j.build(new HttpService(blockChainConfiguration.getUrl()));
         StaticGasProvider provider = new StaticGasProvider(BigInteger.ZERO, BigInteger.valueOf(GAS_LIMIT));
