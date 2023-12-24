@@ -36,7 +36,7 @@ public class NewsService {
         NewsContract contract = blockchainConfigService.getContract();
 
         Optional<News> optionalNews = Optional.ofNullable(newsRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Transaction can not found by object id:" + id)));
+                .orElseThrow(() -> new RuntimeException("Transaction can not found by object id: " + id)));
         News news = optionalNews.orElse(null);
         return getNewsResponse(news, contract);
     }
@@ -45,7 +45,7 @@ public class NewsService {
         NewsContract contract = blockchainConfigService.getContract();
 
         Optional<News> optionalNews = Optional.ofNullable(newsRepository.findByTransactionTransactionHash(txId)
-                .orElseThrow(() -> new RuntimeException("Transaction can not found by transaction id:" + txId)));
+                .orElseThrow(() -> new RuntimeException("Transaction can not found by transaction id: " + txId)));
         News news = optionalNews.orElse(null);
         return getNewsResponse(news, contract);
     }
@@ -124,7 +124,7 @@ public class NewsService {
 
         List<News> newsList = newsRepository.findByCategory(category);
         if (newsList.isEmpty()) {
-            throw new RuntimeException("Transactions can not found by category:" + category);
+            throw new RuntimeException("Transactions can not found by category: " + category);
         }
         return newsList.stream().map(news -> getNewsResponse(news, contract)).filter(Objects::nonNull).collect(Collectors.toList());
     }

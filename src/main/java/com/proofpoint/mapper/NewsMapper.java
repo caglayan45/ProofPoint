@@ -16,7 +16,14 @@ public class NewsMapper {
     }
 
     public NewsResponse toResponse(News news, Object chainData) {
-        return NewsResponse.builder().blockchainId(news.getTransaction().getBlockchainId()).blockNumber(news.getTransaction().getBlockNumber()).chainData(chainData).contractAddress(news.getTransaction().getContractAddress()).transactionHash(news.getTransaction().getTransactionHash()).explorerUrl(blockchainConfigService.getExplorerUrl(news.getTransaction().getTransactionHash())).build();
+        return NewsResponse.builder()
+                .blockchainId(news.getTransaction().getBlockchainId())
+                .blockNumber(news.getTransaction().getBlockNumber())
+                .chainData(chainData)
+                .contractAddress(news.getTransaction().getContractAddress())
+                .transactionHash(news.getTransaction().getTransactionHash())
+                .explorerUrl(blockchainConfigService.getExplorerUrl(news.getTransaction().getTransactionHash()))
+                .build();
     }
 
     public News toDocument(NewsRequest request) {
