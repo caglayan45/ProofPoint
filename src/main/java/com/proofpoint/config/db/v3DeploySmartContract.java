@@ -39,14 +39,14 @@ public class v3DeploySmartContract {
 
         TransactionManager transactionManager = new RawTransactionManager(web3j, blockChainKey, blockChainConfiguration.getChainId());
 
-        NewsDataStorage declarationDataStorage = NewsDataStorage.deploy(web3j, transactionManager, provider).send();
-        NewsContract declarationContract = NewsContract.deploy(web3j, transactionManager, provider, declarationDataStorage.getContractAddress()).send();
+        NewsDataStorage newsDataStorage = NewsDataStorage.deploy(web3j, transactionManager, provider).send();
+        NewsContract newsContract = NewsContract.deploy(web3j, transactionManager, provider, newsDataStorage.getContractAddress()).send();
 
-        declarationDataStorage.allowAccess(declarationContract.getContractAddress()).send();
+        newsDataStorage.allowAccess(newsContract.getContractAddress()).send();
 
         mongoTemplate.save(blockchainConfigDocument);
-        mongoTemplate.save(SmartContract.builder().contractAddress(declarationDataStorage.getContractAddress()).contractName("NewsDataStorage").deployDate(LocalDateTime.now()).isActivated(Boolean.TRUE).build());
-        mongoTemplate.save(SmartContract.builder().contractAddress(declarationContract.getContractAddress()).contractName("NewsContract").deployDate(LocalDateTime.now()).isActivated(Boolean.TRUE).build());
+        mongoTemplate.save(SmartContract.builder().contractAddress(newsDataStorage.getContractAddress()).contractName("NewsDataStorage").deployDate(LocalDateTime.now()).isActivated(Boolean.TRUE).build());
+        mongoTemplate.save(SmartContract.builder().contractAddress(newsContract.getContractAddress()).contractName("NewsContract").deployDate(LocalDateTime.now()).isActivated(Boolean.TRUE).build());
     }
 }
 

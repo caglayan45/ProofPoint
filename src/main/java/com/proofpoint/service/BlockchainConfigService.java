@@ -72,7 +72,7 @@ public class BlockchainConfigService {
         BlockchainConfig blockChainConfig = blockchainConfigRepository.findByIsActivated(Boolean.TRUE).orElseThrow(() -> new RuntimeException("Blockchain configuration not found"));
         Credentials credentials = loadCredentialsFromPK(new BigInteger(blockChainConfig.getBpk()), new BigInteger(blockChainConfig.getBpp()), "");
 
-        SmartContract contract = smartContractRepository.findByContractNameAndIsActivated("NewsContract", true).orElseThrow(() -> new RuntimeException("Declaration contract not found"));
+        SmartContract contract = smartContractRepository.findByContractNameAndIsActivated("NewsContract", true).orElseThrow(() -> new RuntimeException("News contract not found"));
         TransactionManager transactionManager = new RawTransactionManager(web3jClient, credentials, configuration.getChainId());
         return NewsContract.load(contract.getContractAddress(), web3jClient, transactionManager, provider);
     }
