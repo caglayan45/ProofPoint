@@ -3,6 +3,8 @@ package com.proofpoint.mapper;
 import com.proofpoint.document.News;
 import com.proofpoint.dto.request.NewsRequest;
 import com.proofpoint.dto.response.NewsResponse;
+import com.proofpoint.dto.response.PendingNewsResponse;
+import com.proofpoint.enums.Status;
 import com.proofpoint.service.BlockchainConfigService;
 import org.springframework.stereotype.Component;
 
@@ -34,6 +36,20 @@ public class NewsMapper {
                 .description(request.getDescription())
                 .author(request.getAuthor())
                 .category(request.getCategory())
+                .status(Status.PENDING)
+                .build();
+    }
+
+    public PendingNewsResponse toPendingNewsResponse(News news) {
+        return PendingNewsResponse.builder()
+                .id(news.getId())
+                .type(news.getType())
+                .title(news.getTitle())
+                .content(news.getContent())
+                .description(news.getDescription())
+                .author(news.getAuthor())
+                .category(news.getCategory())
+                .status(news.getStatus())
                 .build();
     }
 }

@@ -2,6 +2,7 @@ package com.proofpoint.api;
 
 import com.proofpoint.dto.request.NewsRequest;
 import com.proofpoint.dto.response.NewsResponse;
+import com.proofpoint.dto.response.PendingNewsResponse;
 import com.proofpoint.enums.DocumentTypeCategory;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -19,8 +20,8 @@ public interface NewsAPI {
 
     @PostMapping
     @Operation(operationId = "Save", summary = "Save New News")
-    @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "SUCCESS", content = @Content(schema = @Schema(implementation = NewsResponse.class)))})
-    public NewsResponse createNews(@RequestBody NewsRequest request);
+    @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "SUCCESS", content = @Content(schema = @Schema(implementation = PendingNewsResponse.class)))})
+    public PendingNewsResponse createNews(@RequestBody NewsRequest request);
 
     @GetMapping("/{id}")
     @Operation(operationId = "Get", summary = "Get News By Id")
@@ -42,4 +43,13 @@ public interface NewsAPI {
     @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "SUCCESS", content = @Content(schema = @Schema(implementation = NewsResponse[].class)))})
     public List<NewsResponse> getNewsByCategory(@PathVariable("category") DocumentTypeCategory category);
 
+    @GetMapping("/approve-pending")
+    @Operation(operationId = "Get", summary = "Get News By Status Pending")
+    @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "SUCCESS", content = @Content(schema = @Schema(implementation = PendingNewsResponse[].class)))})
+    public List<PendingNewsResponse> getNewsWhichWaitingForApprove();
+
+    @PutMapping("/approve-pending")
+    @Operation(operationId = "Put", summary = "Approve News")
+    @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "SUCCESS", content = @Content(schema = @Schema(implementation = NewsResponse[].class)))})
+    public List<NewsResponse> approveNews(@RequestBody List<String> newsIds);
 }
