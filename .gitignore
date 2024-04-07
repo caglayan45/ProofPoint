@@ -36,3 +36,25 @@ build/
 
 ### Mac OS ###
 .DS_Store
+.idea/vcs.xml
+.idea/sonarlint/securityhotspotstore/index.pb
+.idea/sonarlint/securityhotspotstore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+.idea/sonarlint/issuestore/index.pb
+.idea/sonarlint/issuestore/f/b/fbd6888367f4a0336b6ce495f9246577e40aff66
+.idea/sonarlint/issuestore/d/5/d5e5d4e5b1e6da0909136472ac508ffb4a750c34
+.idea/sonarlint/issuestore/b/0/b0ceb50a35fc94ad0b6618b94c8df130e8abe3b4
+.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+.idea/sonarlint/issuestore/6/4/64816bc2bf7143401928a87bb62e595e7355ae52
+.idea/sonarlint/issuestore/4/c/4c545ba057d19ffba7df152191de074e0a393fed
+.idea/sonarlint/issuestore/2/9/298e8afa6633a2ee4012cd922689c7d0f62b7aa6
+.idea/sonarlint/issuestore/0/3/0324638ce8ccc6f6e9ea9170633334b621b35c0b
+.idea/sonarlint/issuestore/0/3/0324638ce8ccc6f6e9ea9170633334b621b35c0b
+.idea/sonarlint/issuestore/2/9/298e8afa6633a2ee4012cd922689c7d0f62b7aa6
+.idea/sonarlint/issuestore/4/c/4c545ba057d19ffba7df152191de074e0a393fed
+.idea/sonarlint/issuestore/6/4/64816bc2bf7143401928a87bb62e595e7355ae52
+.idea/sonarlint/issuestore/b/0/b0ceb50a35fc94ad0b6618b94c8df130e8abe3b4
+.idea/sonarlint/issuestore/d/5/d5e5d4e5b1e6da0909136472ac508ffb4a750c34
+.idea/sonarlint/issuestore/f/b/fbd6888367f4a0336b6ce495f9246577e40aff66
+.idea/sonarlint/issuestore/index.pb
+.idea/sonarlint/securityhotspotstore/index.pb
+*.xd

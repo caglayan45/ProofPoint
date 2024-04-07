@@ -35,7 +35,6 @@ contract NewsContract {
         newsDataStorage = NewsDataStorage(_storageAddress);
     }
 
-
     function createNewsWithData(
         string memory _newsId,
         string memory _newsOwner,
@@ -47,8 +46,6 @@ contract NewsContract {
         string memory _author
     ) external onlyOwner returns (uint256) {
         string memory functionName = "createNewsWithData";
-
-
 
         try
         newsDataStorage.createNews(
