@@ -13,33 +13,33 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/api/v1/news") // <1>
+@RequestMapping("/api/v1/news")
 @Tag(name = "News", description = "Create news in blockchain system")
 public interface NewsAPI {
 
     @PostMapping
     @Operation(operationId = "Save", summary = "Save New News")
     @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "SUCCESS", content = @Content(schema = @Schema(implementation = NewsResponse.class)))})
-    public NewsResponse createNews(@RequestBody NewsRequest request); // <2>
+    public NewsResponse createNews(@RequestBody NewsRequest request);
 
     @GetMapping("/{id}")
     @Operation(operationId = "Get", summary = "Get News By Id")
     @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "SUCCESS", content = @Content(schema = @Schema(implementation = NewsResponse.class)))})
-    public NewsResponse getNews(@PathVariable("id") String id); // <3>
+    public NewsResponse getNews(@PathVariable("id") String id);
 
     @GetMapping("/tx/{txId}")
     @Operation(operationId = "Get", summary = "Get News By Transaction Id")
     @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "SUCCESS", content = @Content(schema = @Schema(implementation = NewsResponse.class)))})
-    public NewsResponse getNewsByTxId(@PathVariable("txId") String txId); // <4>
+    public NewsResponse getNewsByTxId(@PathVariable("txId") String txId);
 
     @GetMapping
     @Operation(operationId = "Get", summary = "Get News")
     @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "SUCCESS", content = @Content(schema = @Schema(implementation = NewsResponse[].class)))})
-    public List<NewsResponse> getNews(); // <5>
+    public List<NewsResponse> getNews();
 
     @GetMapping("/category/{category}")
     @Operation(operationId = "Get", summary = "Get News By Transaction Id")
     @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "SUCCESS", content = @Content(schema = @Schema(implementation = NewsResponse[].class)))})
-    public List<NewsResponse> getNewsByCategory(@PathVariable("category") DocumentTypeCategory category); // <4>
+    public List<NewsResponse> getNewsByCategory(@PathVariable("category") DocumentTypeCategory category);
 
 }
