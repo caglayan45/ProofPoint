@@ -3,6 +3,7 @@ package com.proofpoint.controller;
 import com.proofpoint.api.NewsAPI;
 import com.proofpoint.dto.request.NewsRequest;
 import com.proofpoint.dto.response.NewsResponse;
+import com.proofpoint.dto.response.PendingNewsResponse;
 import com.proofpoint.enums.DocumentTypeCategory;
 import com.proofpoint.service.NewsService;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +18,7 @@ public class NewsController implements NewsAPI {
     private final NewsService newsService;
 
     @Override
-    public NewsResponse createNews(NewsRequest request) {
+    public PendingNewsResponse createNews(NewsRequest request) {
         return newsService.createNews(request);
     }
 
@@ -39,5 +40,15 @@ public class NewsController implements NewsAPI {
     @Override
     public List<NewsResponse> getNewsByCategory(DocumentTypeCategory category) {
         return newsService.getNewsByCategory(category);
+    }
+
+    @Override
+    public List<PendingNewsResponse> getNewsWhichWaitingForApprove() {
+        return newsService.getPendingNews();
+    }
+
+    @Override
+    public List<NewsResponse> approveNews(List<String> newsIds) {
+        return newsService.approveNews(newsIds);
     }
 }
